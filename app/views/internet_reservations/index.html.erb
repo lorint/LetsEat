@@ -1,0 +1,41 @@
+<h1>Listing internet_reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Res time</th>
+      <th>Name</th>
+      <th>Num people</th>
+      <th>Restaurant</th>
+      <th>Reservable type</th>
+      <th>Phone num</th>
+      <th>Source website</th>
+      <th>Time reserved</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @internet_reservations.each do |internet_reservation| %>
+      <tr>
+        <td><%= internet_reservation.res_time %></td>
+        <td><%= internet_reservation.name %></td>
+        <td><%= internet_reservation.num_people %></td>
+        <td><%= internet_reservation.restaurant %></td>
+        <td><%= internet_reservation.reservable_type %></td>
+        <td><%= internet_reservation.phone_num %></td>
+        <td><%= internet_reservation.source_website %></td>
+        <td><%= internet_reservation.time_reserved %></td>
+        <td><%= link_to 'Show', internet_reservation %></td>
+        <td><%= link_to 'Edit', edit_internet_reservation_path(internet_reservation) %></td>
+        <td><%= link_to 'Destroy', internet_reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Internet reservation', new_internet_reservation_path %>

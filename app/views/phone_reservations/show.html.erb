@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Res time:</strong>
+  <%= @phone_reservation.res_time %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @phone_reservation.name %>
+</p>
+
+<p>
+  <strong>Num people:</strong>
+  <%= @phone_reservation.num_people %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @phone_reservation.restaurant %>
+</p>
+
+<p>
+  <strong>Reservable type:</strong>
+  <%= @phone_reservation.reservable_type %>
+</p>
+
+<p>
+  <strong>Phone num:</strong>
+  <%= @phone_reservation.phone_num %>
+</p>
+
+<%= link_to 'Edit', edit_phone_reservation_path(@phone_reservation) %> |
+<%= link_to 'Back', phone_reservations_path %>

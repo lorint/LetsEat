@@ -1,0 +1,37 @@
+<h1>Listing phone_reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Res time</th>
+      <th>Name</th>
+      <th>Num people</th>
+      <th>Restaurant</th>
+      <th>Reservable type</th>
+      <th>Phone num</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phone_reservations.each do |phone_reservation| %>
+      <tr>
+        <td><%= phone_reservation.res_time %></td>
+        <td><%= phone_reservation.name %></td>
+        <td><%= phone_reservation.num_people %></td>
+        <td><%= phone_reservation.restaurant %></td>
+        <td><%= phone_reservation.reservable_type %></td>
+        <td><%= phone_reservation.phone_num %></td>
+        <td><%= link_to 'Show', phone_reservation %></td>
+        <td><%= link_to 'Edit', edit_phone_reservation_path(phone_reservation) %></td>
+        <td><%= link_to 'Destroy', phone_reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phone reservation', new_phone_reservation_path %>

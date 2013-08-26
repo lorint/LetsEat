@@ -1,0 +1,49 @@
+<%= form_for(@internet_reservation) do |f| %>
+  <% if @internet_reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@internet_reservation.errors.count, "error") %> prohibited this internet_reservation from being saved:</h2>
+
+      <ul>
+      <% @internet_reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :res_time %><br>
+    <%= f.datetime_select :res_time %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :num_people %><br>
+    <%= f.number_field :num_people %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurant %><br>
+    <%= f.text_field :restaurant %>
+  </div>
+  <div class="field">
+    <%= f.label :reservable_type %><br>
+    <%= f.text_field :reservable_type %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_num %><br>
+    <%= f.text_field :phone_num %>
+  </div>
+  <div class="field">
+    <%= f.label :source_website %><br>
+    <%= f.text_field :source_website %>
+  </div>
+  <div class="field">
+    <%= f.label :time_reserved %><br>
+    <%= f.datetime_select :time_reserved %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Res time:</strong>
+  <%= @internet_reservation.res_time %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @internet_reservation.name %>
+</p>
+
+<p>
+  <strong>Num people:</strong>
+  <%= @internet_reservation.num_people %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @internet_reservation.restaurant %>
+</p>
+
+<p>
+  <strong>Reservable type:</strong>
+  <%= @internet_reservation.reservable_type %>
+</p>
+
+<p>
+  <strong>Phone num:</strong>
+  <%= @internet_reservation.phone_num %>
+</p>
+
+<p>
+  <strong>Source website:</strong>
+  <%= @internet_reservation.source_website %>
+</p>
+
+<p>
+  <strong>Time reserved:</strong>
+  <%= @internet_reservation.time_reserved %>
+</p>
+
+<%= link_to 'Edit', edit_internet_reservation_path(@internet_reservation) %> |
+<%= link_to 'Back', internet_reservations_path %>
